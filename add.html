@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADD</title>
+<style>
+.header{
+	padding:20px;
+	text-align:center;
+}
+.container{
+	padding:20px;
+	text-align:center;
+}
+body{
+	background-image: url('ima.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;  
+	background-size: cover;
+}
+button{
+	background-color:#E6E6FA;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<h1>ADDITION OF TWO NUMBERS FROM THE PROMPT</h1>
+	</div>
+	<div class="container">
+		<h2>Click the below given button to add to numbers from the prompt.<br>The result will be displayed below.</h2>
+		<button  class="button" onclick="addNumbers()">ADD THE GIVEN NUMBERS</button>
+		<h2 id="result"></h2>
+	</div>
+	<script>
+	function addNumbers() {
+		let FirstNumber = prompt("Enter the first number:");
+		let SecondNumber = prompt("Enter the second number:");
+		FirstNumber = parseInt(FirstNumber);
+		SecondNumber = parseInt(SecondNumber);
+		let Sum = FirstNumber + SecondNumber;
+		document.getElementById("result").innerText ="The Sum is: " + Sum;
+		alert("The sum is " + Sum);
+	}
+	</script>
+</body>
+</html>
